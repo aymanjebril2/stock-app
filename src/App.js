@@ -1,7 +1,12 @@
 import React from "react";
+import FatchData from "./componets/FatchData";
 
 const App = () => {
-  return <div> hello world </div>;
+  return (
+    <div>
+      <FatchData />
+    </div>
+  );
 };
 
 export default App;
