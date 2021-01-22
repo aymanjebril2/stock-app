@@ -10,10 +10,14 @@ import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 640,
   },
-  tableContainer: {
-    minWidth: 650,
+
+  green: {
+    color: "green",
+  },
+  red: {
+    color: "red",
   },
 });
 
@@ -26,7 +30,12 @@ const Stock = ({ companyName, symbol, latestPrice, changePercent }) => {
           <TableCell>{companyName}</TableCell>
           <TableCell align="right">{symbol}</TableCell>
           <TableCell align="right">{latestPrice}</TableCell>
-          <TableCell align="right">{changePercent}</TableCell>
+          <TableCell
+            align="right"
+            className={changePercent > 0 ? classes.green : classes.red}
+          >
+            {"%" + changePercent.toFixed(2)}
+          </TableCell>
         </TableHead>
       </Table>
     </TableContainer>

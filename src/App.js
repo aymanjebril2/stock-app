@@ -7,7 +7,6 @@ import TableForMyCompent from "./componets/TableForMyCompent";
 
 const App = () => {
   const [company, setCompany] = useState([]);
-  console.log(company);
 
   return (
     <div>
