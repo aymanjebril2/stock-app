@@ -7,30 +7,30 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
   tableContainer: {
     minWidth: 650,
+    marginTop: 50,
   },
 });
-
-const Stock = ({ companyName, symbol, latestPrice, changePercent }) => {
+const TableForMyCompent = () => {
   const classes = useStyles();
+
   return (
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead component="th" scope="row">
-          <TableCell>{companyName}</TableCell>
-          <TableCell align="right">{symbol}</TableCell>
-          <TableCell align="right">{latestPrice}</TableCell>
-          <TableCell align="right">{changePercent}</TableCell>
+          <TableCell>Company Name</TableCell>
+          <TableCell align="right">Symbol</TableCell>
+          <TableCell align="right">Lates Price</TableCell>
+          <TableCell align="right">Change Percent</TableCell>
         </TableHead>
       </Table>
     </TableContainer>
   );
 };
 
-export default Stock;
+export default TableForMyCompent;

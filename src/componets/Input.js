@@ -33,7 +33,7 @@ const Input = ({ company, setCompany }) => {
         <TextField
           id="filled-full-width"
           label="Company Name"
-          style={{ width: 500, marginLeft: 25 + "%" }}
+          style={{ width: 500, marginLeft: 30 + "%", marginTop: 140 }}
           placeholder="search ....."
           helperText=""
           fullWidth
@@ -57,7 +57,7 @@ const Input = ({ company, setCompany }) => {
         color="primary"
         disableElevation
         onClick={handleButton}
-        style={{ width: 400, marginLeft: 28 + "%" }}
+        style={{ width: 400, marginLeft: 34 + "%" }}
       >
         Search
       </Button>
