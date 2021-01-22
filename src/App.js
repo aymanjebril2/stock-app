@@ -1,10 +1,18 @@
-import React from "react";
-import FatchData from "./componets/FatchData";
+import React, { useState } from "react";
+import Header from "./componets/Header";
+
+import Input from "./componets/Input";
+import Stock from "./componets/Stock";
 
 const App = () => {
+  const [company, setCompany] = useState([]);
   return (
     <div>
-      <FatchData />
+      <Header />
+      {company.map((item, index) => {
+        return <Stock {...item} key={index} />;
+      })}
+      <Input company={company} setCompany={setCompany} />
     </div>
   );
 };
