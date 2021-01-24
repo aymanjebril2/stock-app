@@ -25,7 +25,7 @@ const Stock = ({ companyName, symbol, latestPrice, changePercent }) => {
   const classes = useStyles();
   return (
     <TableContainer component={Paper} className={classes.tableContainer}>
-      <Table className={classes.table} aria-label="simple table">
+      <Table aria-label="simple table">
         <TableHead component="th" scope="row">
           <TableCell>{companyName}</TableCell>
           <TableCell align="right">{symbol}</TableCell>
@@ -34,7 +34,7 @@ const Stock = ({ companyName, symbol, latestPrice, changePercent }) => {
             align="right"
             className={changePercent > 0 ? classes.green : classes.red}
           >
-            {"%" + changePercent.toFixed(2)}
+            {"%" + (changePercent * 100).toFixed(2)}
           </TableCell>
         </TableHead>
       </Table>
